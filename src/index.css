@@ -1,0 +1,132 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here.
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* 蓝白色主题 - 浅色模式 */
+    --background: 0 0% 100%;
+    --foreground: 220 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+    /* 主色：深蓝色 */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    /* 次要色：浅蓝色 */
+    --secondary: 210 100% 95%;
+    --secondary-foreground: 217 91% 60%;
+    /* 柔和背景色 */
+    --muted: 210 40% 96%;
+    --muted-foreground: 220 15% 45%;
+    /* 强调色：极浅蓝 */
+    --accent: 210 100% 97%;
+    --accent-foreground: 217 91% 60%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 60%;
+    --chart-1: 217 91% 60%;
+    --chart-2: 200 80% 55%;
+    --chart-3: 190 70% 50%;
+    --chart-4: 210 85% 65%;
+    --chart-5: 225 75% 70%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 220 20% 15%;
+    --sidebar-primary: 217 91% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 100% 95%;
+    --sidebar-accent-foreground: 217 91% 60%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 217 91% 60%;
+  }
+
+  .dark {
+    /* 深色模式 */
+    --background: 220 25% 8%;
+    --foreground: 210 40% 98%;
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 40% 98%;
+    /* 主色：亮蓝色 */
+    --primary: 217 91% 65%;
+    --primary-foreground: 220 25% 8%;
+    /* 次要色：深蓝灰 */
+    --secondary: 220 20% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 220 20% 15%;
+    --muted-foreground: 215 20% 65%;
+    /* 强调色：深蓝 */
+    --accent: 220 20% 14%;
+    --accent-foreground: 217 91% 65%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 217 91% 65%;
+    --chart-1: 217 91% 65%;
+    --chart-2: 200 80% 60%;
+    --chart-3: 190 70% 55%;
+    --chart-4: 210 85% 70%;
+    --chart-5: 225 75% 75%;
+    --sidebar-background: 220 25% 8%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 220 25% 8%;
+    --sidebar-accent: 220 20% 15%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 220 20% 18%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  /* 渐变文字效果 */
+  .gradient-text {
+    background: linear-gradient(135deg, hsl(217 91% 60%), hsl(200 80% 55%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .dark .gradient-text {
+    background: linear-gradient(135deg, hsl(217 91% 65%), hsl(200 80% 60%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  /* 渐变背景 */
+  .gradient-bg {
+    background: linear-gradient(135deg, hsl(217 91% 60% / 0.1), hsl(200 80% 55% / 0.1));
+  }
+
+  .dark .gradient-bg {
+    background: linear-gradient(135deg, hsl(217 91% 65% / 0.15), hsl(200 80% 60% / 0.15));
+  }
+}
